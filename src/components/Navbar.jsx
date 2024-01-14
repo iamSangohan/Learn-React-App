@@ -13,33 +13,27 @@ function Navbar() {
 
     return (
         <>
-            <header className="d-flex flex-row justify-content-around align-items-center bg-black">
-                <div className="titre-page d-flex align-items-center fs-1 fw-bold">
+            <header>
+                <div>
                     <img src={logo} alt="Logoipsum" />
                 </div>
 
-                <div className="ps-5 bug">
-                    <div className="menuBurger">
-                        <div className="btnBurger"></div>
-                    </div>
-                </div>
-
-                <nav className="d-flex flex-row justify-content-center align-items-center">
-                    <ul className="d-flex flex-row align-items-center text-center">
-                        <li className="m-3">
-                            <a href="" className="text-light">Accueil</a>
+                <nav ref={navRef} className="navbar">
+                    <ul className="">
+                        <li className="">
+                            <a href="" className="">Accueil</a>
                         </li>
-                        <li className="m-3">
-                            <a href="" className="text-light">A propos</a>
+                        <li className="">
+                            <a href="" className="">A propos</a>
                         </li>
-                        <li className="m-3">
-                            <a href="" className="text-light">Contactez-nous</a>
+                        <li className="">
+                            <a href="" className="">Contactez-nous</a>
                         </li>
                         <li>
                             <button
                                 className="nav-btn nav-close-btn"
                                 onClick={showNavbar}>
-                                <FontAwesomeIcon icon="fa-solid fa-times" style={{color: "#FFD43B",}} />
+                                <i className="fa-solid fa-xmark" style={{color: '#FFD43B'}}></i>
                             </button>
                         </li>
                     </ul>
@@ -48,7 +42,7 @@ function Navbar() {
                 <button
                     className="nav-btn"
                     onClick={showNavbar}>
-                    <FontAwesomeIcon icon="fa-solid fa-bars" style={{color: "#FFD43B",}} />
+                    <i className="fa-solid fa-bars" style={{color: '#FFD43B'}}></i>
                 </button>
             </header>
         </>
